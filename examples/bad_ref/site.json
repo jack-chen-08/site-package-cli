@@ -1,0 +1,16 @@
+{
+  "site_code": "SITE_DEMO_ALPHA",
+  "org_code": "ORG_DEMO_0001",
+  "name": "示范会员空间A",
+  "timezone": "Asia/Shanghai",
+  "locale": "zh-CN",
+  "status": "active",
+  "contact": {
+    "owner_name": "演示管理员",
+    "owner_email": "demo-admin@example.invalid"
+  },
+  "branding": {
+    "primary_color": "#1F6FEB",
+    "logo_text": "会员空间"
+  }
+}

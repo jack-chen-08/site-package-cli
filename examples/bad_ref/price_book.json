@@ -1,0 +1,26 @@
+{
+  "currency": "CNY",
+  "price_items": [
+    {
+      "item_code": "ITEM_HALL_HOURLY",
+      "name": "多功能厅 每小时",
+      "unit_amount_fen": 12000,
+      "billing_period": "once",
+      "tax_included": true
+    },
+    {
+      "item_code": "ITEM_ROOM_MONTHLY",
+      "name": "洽谈室 月度会员",
+      "unit_amount_fen": 98000,
+      "billing_period": "month",
+      "tax_included": true
+    },
+    {
+      "item_code": "ITEM_KB_PACKAGE",
+      "name": "知识库增值包 每年",
+      "unit_amount_fen": 560000,
+      "billing_period": "year",
+      "tax_included": false
+    }
+  ]
+}

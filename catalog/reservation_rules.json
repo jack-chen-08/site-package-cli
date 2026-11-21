@@ -1,0 +1,9 @@
+{
+  "catalog_version": "2026.10",
+  "description": "一期预约规则目录（虚构数据），配置包中的 spaces.reservation_rule_code 必须命中此处",
+  "reservation_rules": [
+    {"code": "RR_STANDARD_30MIN", "name": "标准 30 分钟时段"},
+    {"code": "RR_HOURLY_60MIN", "name": "整点 60 分钟时段"},
+    {"code": "RR_HALF_DAY", "name": "半天时段"}
+  ]
+}

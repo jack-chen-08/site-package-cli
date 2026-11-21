@@ -1,0 +1,22 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-9.2.0, pluggy-1.7.0 -- /home/ubuntuuser/work/ch2461/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/ubuntuuser/work/ch2461
+collecting ... collected 14 items
+
+tests/test_acceptance.py::test_acceptance1_good_package_validate_passes PASSED [  7%]
+tests/test_acceptance.py::test_acceptance1_bad_schema_reports_schema_error PASSED [ 14%]
+tests/test_acceptance.py::test_acceptance1_bad_ref_reports_missing_reference PASSED [ 21%]
+tests/test_acceptance.py::test_acceptance1_bad_ref_covers_sop_and_reservation PASSED [ 28%]
+tests/test_acceptance.py::test_acceptance1_bad_conflict_site_code_occupied PASSED [ 35%]
+tests/test_acceptance.py::test_acceptance1_bad_amount_rejects_non_integer_fen PASSED [ 42%]
+tests/test_acceptance.py::test_acceptance2_plan_does_not_change_row_counts PASSED [ 50%]
+tests/test_acceptance.py::test_acceptance2_plan_connection_is_read_only PASSED [ 57%]
+tests/test_acceptance.py::test_acceptance2_plan_reports_skip_after_apply PASSED [ 64%]
+tests/test_acceptance.py::test_acceptance3_apply_writes_stages_in_order PASSED [ 71%]
+tests/test_acceptance.py::test_acceptance3_apply_midway_failure_rolls_back_everything PASSED [ 78%]
+tests/test_acceptance.py::test_acceptance3_repeat_apply_is_idempotent PASSED [ 85%]
+tests/test_acceptance.py::test_schema_files_are_frozen_draft_2020_12 PASSED [ 92%]
+tests/test_acceptance.py::test_cli_prints_human_table_and_json PASSED    [100%]
+
+============================== 14 passed in 8.84s ==============================

@@ -1,0 +1,25 @@
+{
+  "spaces": [
+    {
+      "space_code": "SPACE_HALL_A",
+      "name": "多功能厅A",
+      "capacity": 40,
+      "reservation_rule_code": "RR_HOURLY_60MIN",
+      "enabled": true
+    },
+    {
+      "space_code": "SPACE_ROOM_B",
+      "name": "洽谈室B",
+      "capacity": 8,
+      "reservation_rule_code": "RR_STANDARD_30MIN",
+      "enabled": true
+    },
+    {
+      "space_code": "SPACE_STUDIO_C",
+      "name": "直播间C",
+      "capacity": 6,
+      "reservation_rule_code": "RR_HALF_DAY",
+      "enabled": false
+    }
+  ]
+}

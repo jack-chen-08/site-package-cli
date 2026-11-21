@@ -1,0 +1,22 @@
+{
+  "role_bindings": [
+    {
+      "role_code": "ROLE_SITE_ADMIN",
+      "role_name": "空间管理员",
+      "permission_template_code": "PT_MEMBER_MANAGE",
+      "scope": "site"
+    },
+    {
+      "role_code": "ROLE_SPACE_OPERATOR",
+      "role_name": "空间运营",
+      "permission_template_code": "PT_SPACE_RESERVE",
+      "scope": "space"
+    },
+    {
+      "role_code": "ROLE_KB_EDITOR",
+      "role_name": "知识库编辑",
+      "permission_template_code": "PT_KB_PUBLISH",
+      "scope": "site"
+    }
+  ]
+}

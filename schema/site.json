@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:sitepkg:schema:site",
+  "title": "site.json —— 站点主体（S6-PLAN-006）",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["site_code", "org_code", "name", "timezone", "locale", "status", "contact", "branding"],
+  "properties": {
+    "site_code": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]{2,63}$"},
+    "org_code": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]{2,63}$"},
+    "name": {"type": "string", "minLength": 2, "maxLength": 60},
+    "timezone": {"type": "string", "enum": ["Asia/Shanghai", "Asia/Hong_Kong", "UTC"]},
+    "locale": {"type": "string", "enum": ["zh-CN", "zh-TW", "en-US"]},
+    "status": {"type": "string", "enum": ["active", "draft", "suspended"]},
+    "contact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["owner_name", "owner_email"],
+      "properties": {
+        "owner_name": {"type": "string", "minLength": 2, "maxLength": 40},
+        "owner_email": {"type": "string", "format": "email", "maxLength": 120}
+      }
+    },
+    "branding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primary_color", "logo_text"],
+      "properties": {
+        "primary_color": {"type": "string", "pattern": "^#[0-9A-Fa-f]{6}$"},
+        "logo_text": {"type": "string", "minLength": 1, "maxLength": 20}
+      }
+    }
+  }
+}

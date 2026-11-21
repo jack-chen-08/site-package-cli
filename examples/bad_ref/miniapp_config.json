@@ -1,0 +1,11 @@
+{
+  "app_id": "wxdem0a1b2c3d4e5f6",
+  "name": "示范会员空间",
+  "entry_path": "pages/index/index",
+  "theme_color": "#1F6FEB",
+  "features": {
+    "reservation": true,
+    "knowledge_base": true,
+    "price_book": true
+  }
+}

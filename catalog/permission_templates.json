@@ -1,0 +1,12 @@
+{
+  "catalog_version": "2026.10",
+  "description": "一期权限模板目录（虚构数据），配置包中的 role_bindings.permission_template_code 必须命中此处",
+  "permission_templates": [
+    {"code": "PT_SPACE_VIEW", "name": "空间查看", "domain": "space"},
+    {"code": "PT_SPACE_RESERVE", "name": "空间预约", "domain": "space"},
+    {"code": "PT_MEMBER_MANAGE", "name": "会员管理", "domain": "member"},
+    {"code": "PT_KB_READ", "name": "知识库阅读", "domain": "kb"},
+    {"code": "PT_KB_PUBLISH", "name": "知识库发布", "domain": "kb"},
+    {"code": "PT_PRICE_VIEW", "name": "价目查看", "domain": "price"}
+  ]
+}

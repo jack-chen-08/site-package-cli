@@ -1,0 +1,9 @@
+{
+  "catalog_version": "2026.10",
+  "description": "一期 SOP 模板目录（虚构数据），配置包中的 template_code + version 必须命中此处",
+  "sop_templates": [
+    {"code": "SOP_MEMBER_ONBOARD", "name": "会员入驻", "versions": ["1.0.0", "1.1.0"]},
+    {"code": "SOP_RESERVATION_CHECKIN", "name": "预约签到", "versions": ["2.0.0"]},
+    {"code": "SOP_KB_PUBLISH", "name": "知识库发布", "versions": ["1.0.0", "1.2.0"]}
+  ]
+}

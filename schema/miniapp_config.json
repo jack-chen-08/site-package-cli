@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:sitepkg:schema:miniapp_config",
+  "title": "miniapp_config.json —— 小程序配置（S6-PLAN-006）",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["app_id", "name", "entry_path", "theme_color", "features"],
+  "properties": {
+    "app_id": {"type": "string", "pattern": "^wx[a-z0-9]{8,20}$"},
+    "name": {"type": "string", "minLength": 2, "maxLength": 40},
+    "entry_path": {"type": "string", "pattern": "^pages/[a-z0-9_\\-/]+$"},
+    "theme_color": {"type": "string", "pattern": "^#[0-9A-Fa-f]{6}$"},
+    "features": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reservation", "knowledge_base", "price_book"],
+      "properties": {
+        "reservation": {"type": "boolean"},
+        "knowledge_base": {"type": "boolean"},
+        "price_book": {"type": "boolean"}
+      }
+    }
+  }
+}

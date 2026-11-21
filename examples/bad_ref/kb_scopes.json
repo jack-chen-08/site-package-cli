@@ -1,0 +1,16 @@
+{
+  "kb_scopes": [
+    {
+      "kb_code": "KB_MEMBER_GUIDE",
+      "name": "会员手册",
+      "visibility": "site",
+      "space_codes": ["SPACE_HALL_A", "SPACE_ROOM_B"]
+    },
+    {
+      "kb_code": "KB_OPS_MANUAL",
+      "name": "运营手册",
+      "visibility": "role",
+      "space_codes": []
+    }
+  ]
+}

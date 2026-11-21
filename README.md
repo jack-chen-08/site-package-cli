@@ -9,6 +9,20 @@ plan     → 只读比对目标环境，输出「将新增 / 跳过 / 冲突」�
 apply    → 单事务按依赖顺序写入，失败整体回滚，幂等可重放
 ```
 
+## 验收标准 → 用例 → 实测（对应平台 3 条）
+
+| # | 平台验收标准 | 用例（`tests/test_acceptance.py`） | 实测 |
+|---|---|---|---|
+| 1 | 示例包 `validate` 通过；Schema 错误 / 引用不存在 / site_code 冲突 / 金额非整数 4 种埋错包分别报出对应错误 | `test_acceptance1_good_package_validate_passes`、`test_acceptance1_bad_schema_reports_schema_error`（`SCHEMA_INVALID`）、`test_acceptance1_bad_ref_reports_missing_reference`、`test_acceptance1_bad_ref_covers_sop_and_reservation`（`REF_PERMISSION_TEMPLATE_MISSING`）、`test_acceptance1_bad_conflict_site_code_occupied`（`SITE_CODE_OCCUPIED`）、`test_acceptance1_bad_amount_rejects_non_integer_fen`（`AMOUNT_NOT_INTEGER`） | 6 例 PASSED |
+| 2 | `plan` 前后各表行数不变（测试断言，非人工比对） | `test_acceptance2_plan_does_not_change_row_counts`（逐表前后行数断言）、`test_acceptance2_plan_connection_is_read_only`（`SET TRANSACTION READ ONLY`）、`test_acceptance2_plan_reports_skip_after_apply` | 3 例 PASSED |
+| 3 | `apply` 中途失败全部回滚无残留；同一包重复 `apply` 不产生重复记录 | `test_acceptance3_apply_writes_stages_in_order`、`test_acceptance3_apply_midway_failure_rolls_back_everything`、`test_acceptance3_repeat_apply_is_idempotent` | 3 例 PASSED |
+
+实测总结果：**14 passed in 8.84s**（Python 3.12.13 / pytest 9.2.0 / 真实 PostgreSQL 16 临时库）。
+完整 pytest 输出：`run_tests_output.txt`；CLI 全流程逐条 transcript：`RUN_LOG.md`。
+复现：`pip install -r requirements.txt && pytest -q`。
+
+---
+
 ---
 
 ## 1. 目录结构
